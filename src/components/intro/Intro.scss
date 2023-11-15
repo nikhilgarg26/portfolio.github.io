@@ -1,0 +1,117 @@
+@import '../../global.scss';
+
+.intro{
+    // background-color: lightblue;
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+    }
+    .left{
+        flex: 0.5;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        // justify-content: space-around;
+
+        @include mobile{
+            flex: 0.6;
+            // margin-top: 35px;
+        }
+        .image{
+            // background-color: red;
+            width: 100%;
+            display: flex;
+
+            justify-content: space-around;
+            // border-radius: 40%;
+            img{
+                border-radius: 50%;
+                height: 90%;
+                width: 420px;
+
+                @include mobile{
+                    width: 310px;
+                    // height: 50%;
+                }
+            }
+        }
+    }
+    .right
+    {
+        flex: 0.3;
+        display: flex;
+        // // top: 50px;
+        align-items: center;
+        flex-direction: column;
+        justify-content:space-around;
+        // // background-color: blue;
+
+        .text{
+            width: 100%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+
+            @include mobile{
+                text-align: center;
+            }
+
+            span{
+                color: crimson;
+                font-weight: 500;
+            }
+        }
+        h3{
+            font-size:35px;
+            font-weight: 400;
+            margin: 20px 0;
+
+            @include mobile{
+                margin: 10px;
+            }
+        }
+        h1{
+            font-size: 55px;
+            font-weight: 500;
+            // color: crimson;
+        }
+        
+        .down{
+            position: absolute;
+            bottom: 20px;
+            width: 30px;
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-around;
+
+            img{
+                width: 30px;
+                animation: arrowBlink 4s infinite;
+            }
+            
+            @keyframes arrowBlink {
+                // 0% {opacity: 1;}
+                50% {opacity: 0;}
+                100% {opacity: 1;}
+            }
+
+            &:hover{
+                // animation-play-state: paused;
+                animation: jump 1s 1;
+
+                @keyframes jump{
+                    50% { position: absolute;
+                          bottom: 30px;
+                        }
+                    100% {
+                        position: absolute;
+                          bottom: 20px;
+                    }
+                }
+            }
+              
+        }
+    }
+}

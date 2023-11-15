@@ -1,0 +1,28 @@
+@import '../../global.scss';
+
+li {
+    margin: 0 30px;
+    font-size: large;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    // border: 2px solid black;
+
+    @include mobile{
+        font-size:larger;
+        // flex: 1 0 21%;
+        margin: 10px;
+        // padding: 2px 5px;
+    }
+
+    &:hover {
+        background-color: crimson;
+        color: white;
+    }
+
+    &.active{
+        background-color: crimson;
+        color: white;
+    }
+}

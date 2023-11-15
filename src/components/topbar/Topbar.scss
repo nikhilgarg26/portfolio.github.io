@@ -1,0 +1,106 @@
+@import '../../global.scss';
+
+.topbar {
+    // color: crimson;
+    width: 100vw;
+    background-color: white;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    transition: all 1s ease;
+    border-bottom: 5px solid crimson;
+    // display: flex;
+    // align-items: center;
+
+    .wrapper {
+        height: 100%;
+        margin: auto 0;
+        padding: 0px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile{
+            padding-left: 15px;
+            padding-right: 25px;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin: 0 30px;
+
+                @include mobile{
+                    display: none;
+                }
+
+                span {
+                    margin: 0 15px;
+                }
+            }
+
+            .logo {
+                font-size: xx-large;
+                text-decoration: none;
+                color: inherit;
+                margin: 0 20px;
+            }
+        }
+
+        .right {
+
+            .hamburger{
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // cursor: pointer;
+                // scroll-behavior: none;
+                overflow: hidden;
+
+                .line {
+                    width: 100%;
+                    height: 3px;
+                    background-color: black;
+                    margin: 0;
+                    // display: flex;
+                    // flex-direction: column;
+                    // justify-content: space-between;
+                    // cursor: pointer;
+                    // margin-top: 5px;
+                    transform-origin: left;
+                    transition: all 1s ease;
+                }
+    
+            }
+            
+            
+            
+        }
+    }
+    
+}
+.active{
+    background-color: crimson;
+    color: white;
+    .line1{
+        transform: rotate(45deg);
+    }
+    .line2{
+        // display: none;
+        opacity: 0;
+    }
+    .line3{
+        transform: rotate(-45deg);
+    }
+    // color: white;
+}
