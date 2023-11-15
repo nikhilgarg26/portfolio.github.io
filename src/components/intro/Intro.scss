@@ -6,6 +6,7 @@
 
     @include mobile{
         flex-direction: column;
+        height: 100vh;
     }
     .left{
         flex: 0.5;
@@ -31,7 +32,7 @@
                 width: 420px;
 
                 @include mobile{
-                    width: 310px;
+                    width: 35vh;
                     // height: 50%;
                 }
             }
@@ -70,13 +71,13 @@
 
             @include mobile{
                 margin: 10px;
-                font-size: 8vw;
+                font-size: 4vh;
             }
         }
         h1{
             font-size: 55px;
             font-weight: 500;
-            font-size: 10vw;
+            font-size: 5vh;
             // color: crimson;
         }
         
